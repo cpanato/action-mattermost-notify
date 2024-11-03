@@ -14,6 +14,9 @@ For the message format you can check the
 | MATTERMOST_CHANNEL     | The Mattermost channel to sent the message         |                 | false    |
 | MATTERMOST_USERNAME    | The Mattermost username shown in the webhook       |                 | false    |
 | MATTERMOST_ICON_URL    | The Mattermost Icon URL for the webhook            |                 | false    |
+| MATTERMOST_ICON_EMOJI  | The Mattermost Icon EMOJI for the webhook          |                 | false    |
+| MATTERMOST_PRIORITY    | The Mattermost Priority for the webhook            |                 | false    |
+| MATTERMOST_CARD        | The Mattermost Card for the webhook                |                 | false    |
 | TEXT                   | The text for the webhook message                   |                 | false    |
 | PAYLOAD                | The payload for the webhook                        |                 | false    |
 | PAYLOAD_FILENAME       | The payload file name for the webhook (deprecated) | mattermost.json | false    |
