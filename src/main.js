@@ -14,6 +14,9 @@ async function run() {
       channel: core.getInput('MATTERMOST_CHANNEL'),
       username: core.getInput('MATTERMOST_USERNAME'),
       icon: core.getInput('MATTERMOST_ICON_URL'),
+      icon_emoji: core.getInput('MATTERMOST_ICON_EMOJI'),
+      card: core.getInput('MATTERMOST_CARD'),
+      priority: core.getInput('MATTERMOST_PRIORITY'),
       text: core.getInput('TEXT'),
       payload: core.getInput('PAYLOAD'),
       filename: core.getInput('PAYLOAD_FILENAME')
@@ -54,11 +57,17 @@ async function generatePayload(inputs) {
   } else if (inputs.text !== '') {
     core.debug('Will use the TEXT input to generate the payload.')
 
-    const payload = {
+    var payload = {
       channel: inputs.channel,
       username: inputs.username,
       icon_url: inputs.icon,
-      text: inputs.text
+      icon_emoji: inputs.icon_emoji,
+      text: inputs.text,
+      priority: inputs.priority
+    }
+
+    if (inputs.card !== '') {
+        payload.props = {card: inputs.card}
     }
 
     return payload

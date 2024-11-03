@@ -19,6 +19,15 @@ inputs:
   MATTERMOST_ICON_URL:
     description: 'The Mattermost Icon URL for the webhook'
     required: false
+  MATTERMOST_ICON_EMOJI:
+    description: 'The Mattermost Icon Emoji for the webhook'
+    required: false
+  MATTERMOST_CARD:
+    description: 'The Mattermost Card for the webhook'
+    required: false
+  MATTERMOST_PRIORITY:
+    description: 'The Mattermost Priority for the webhook'
+    required: false
   TEXT:
     description: 'The text for the webhook message'
     required: false
